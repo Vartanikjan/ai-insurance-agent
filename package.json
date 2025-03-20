@@ -2,6 +2,7 @@
   "name": "ai-insurance-agent",
   "version": "1.0.0",
   "description": "AI Insurance Agent that connects customers with trusted agents",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
