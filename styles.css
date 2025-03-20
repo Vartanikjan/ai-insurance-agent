@@ -1,1 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#chatbot {
+    width: 300px;
+    margin: 50px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#chat-window {
+    height: 300px;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#user-input {
+    width: 80%;
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
 
