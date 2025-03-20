@@ -1,14 +1,3 @@
-// Toggle Chat Window
-document.getElementById("chatbot-button").addEventListener("click", function() {
-    const chatContainer = document.getElementById("chat-container");
-    if (chatContainer.style.display === "none") {
-        chatContainer.style.display = "block";
-    } else {
-        chatContainer.style.display = "none";
-    }
-});
-
-// Function to Send Message
 async function sendMessage() {
     const userInput = document.getElementById("user-input").value.trim();
     if (!userInput) return;
@@ -33,7 +22,7 @@ async function sendMessage() {
     document.getElementById("user-input").value = "";
 }
 
-// Function to Display Messages
+// Function to Display Messages in Chat
 function displayMessage(sender, text, className) {
     const chatWindow = document.getElementById("chat-window");
     const messageElement = document.createElement("p");
