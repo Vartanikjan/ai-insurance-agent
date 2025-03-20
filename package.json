@@ -1,0 +1,12 @@
+{
+  "name": "ai-insurance-agent",
+  "version": "1.0.0",
+  "description": "AI Insurance Agent that connects customers with trusted agents",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "openai": "^3.2.1"
+  }
+}
