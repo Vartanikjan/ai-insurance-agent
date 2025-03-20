@@ -8,29 +8,18 @@
 </head>
 <body>
 
-    <h1>Welcome to AI Insurance Agent</h1>
-    <p>Get connected with the best insurance rates in seconds.</p>
+    <button id="chatbot-button">Chat with AI Agent</button>
 
-    <!-- Chatbot Section -->
-    <section id="chatbot">
-        <h2>Chat with Our AI Agent</h2>
+    <div id="chat-container">
+        <div id="chat-header">Chat with Our AI Agent</div>
         <div id="chat-window"></div>
-        <input type="text" id="user-input" placeholder="Type a message...">
-        <button onclick="sendMessage()">Send</button>
-    </section>
-
-    <!-- Lead Capture Form -->
-    <section id="lead-capture">
-        <h2>Get a Free Insurance Quote</h2>
-        <p>Enter your details, and our trusted insurance agent will contact you.</p>
-        <form id="lead-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <input type="tel" id="phone" placeholder="Your Phone" required>
-            <button type="submit">Get Quote</button>
-        </form>
-    </section>
+        <div id="chat-input-container">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
 
     <script src="chatbot.js"></script>
 </body>
 </html>
+
