@@ -7,15 +7,60 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Revolutionizing Insurance with AI</h1>
+        <p>Get the best insurance rates with our AI-powered agent.</p>
+        <button id="chatbot-button">Chat with AI</button>
+    </section>
 
-    <div id="chat-container">
-        <div id="chat-header">AI Insurance Agent</div>
-        <div id="chat-window"></div>
-        <div id="chat-input-container">
-            <input type="text" id="user-input" placeholder="Ask me anything about insurance...">
-            <button onclick="sendMessage()">Send</button>
+    <!-- AI Chatbot -->
+    <section id="chat-section">
+        <div id="chat-container">
+            <div id="chat-header">AI Insurance Agent</div>
+            <div id="chat-window"></div>
+            <div id="chat-input-container">
+                <input type="text" id="user-input" placeholder="Ask me anything about insurance...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">1. Chat with our AI</div>
+            <div class="step">2. Get matched with a trusted agent</div>
+            <div class="step">3. Save money on insurance</div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Why Choose Our AI Agent?</h2>
+        <ul>
+            <li>Instant insurance quotes</li>
+            <li>Personalized policy recommendations</li>
+            <li>24/7 AI-powered assistance</li>
+        </ul>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section id="lead-capture">
+        <h2>Get a Free Quote</h2>
+        <form id="lead-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Your Phone" required>
+            <button type="submit">Get Quote</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>AI Insurance Agent © 2025 - All Rights Reserved</p>
+    </footer>
 
     <script src="chatbot.js"></script>
 </body>
