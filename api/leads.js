@@ -1,23 +1,26 @@
 export default async function handler(req, res) {
-    if (req.method !== "POST") {
-        return res.status(405).json({ error: "Method Not Allowed" });
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method Not Allowed" });
+  }
+
+  try {
+    const { name, email, phone } = req.body;
+
+    if (!name || !email || !phone) {
+      return res.status(400).json({ error: "All fields are required" });
     }
 
-    try {
-        const { name, email, phone } = req.body;
+    // Send lead data to Make.com webhook
+    const webhookUrl = "https://hook.us2.make.com/8albdsryqbddn1dholni4ne5ic1j3woy";
+    await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, phone, timestamp: new Date().toISOString() })
+    });
 
-        if (!name || !email || !phone) {
-            return res.status(400).json({ error: "All fields are required" });
-        }
-
-        console.log("New Lead Captured:", { name, email, phone });
-
-        // Here, we can later connect this to a Google Sheet, CRM, or database
-
-        res.status(200).json({ message: "Lead captured successfully!" });
-
-    } catch (error) {
-        console.error("Lead Capture Error:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
-}
+    res.status(200).json({ message: "Thank you! Your information has been received." });
+  } catch (error) {
+    console.error("Lead API error:", error);
+    res.status(500).json({ error: "Internal Server Error: " + error.message });
+  }
+} 
